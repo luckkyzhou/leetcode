@@ -15,4 +15,4 @@ def twoSum(nums, target):
     return None
 
 if __name__ == '__main__':
-    print twoSum(nums,target)
+    print(twoSum(nums,target))
