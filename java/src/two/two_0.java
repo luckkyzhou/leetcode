@@ -1,7 +1,7 @@
 package two;
 
 public class two_0 {
-    public class ListNode {
+    public static class ListNode {
         int val;
         ListNode next;
         ListNode(int x) {val = x;}
