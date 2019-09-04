@@ -30,3 +30,7 @@ def addTwoNumbers(self, l1:ListNode,l2:ListNode):
     if(carry>0):
         r.next=ListNode(1)
     return re.next
+
+if __name__ == '__main__':
+
+    addTwoNumbers()
