@@ -21,7 +21,7 @@ def addTwoNumbers(self, l1:ListNode,l2:ListNode):
     while (l1 or l2):
         x = l1.val if l1 else 0
         y = l2.val if l2 else 0
-        s = carry+x+y
+        s = carry + x + y
         carry=s//10
         r.next=ListNode(s%10)
         r=r.next
@@ -31,6 +31,16 @@ def addTwoNumbers(self, l1:ListNode,l2:ListNode):
         r.next=ListNode(1)
     return re.next
 
-if __name__ == '__main__':
+def inputListNode(self):
+    listnode1 = ListNode(0)
+    listnode1.next = ListNode(2)
+    #listnode1.next = listnode1
+    return ListNode_handle.printListNode(listnode1)
 
-    addTwoNumbers()
+if __name__ == '__main__':
+    inputListNode(1)
+    #listnode1.next = ListNode(2)
+    #listnode2 = ListNode(2)
+    #listnode2.next = ListNode(3)
+    #output = addTwoNumbers(listnode1,listnode2)
+    #print(output)
