@@ -18,7 +18,7 @@ def addTwoNumbers(l1:ListNode,l2:ListNode):
         node = node.next
         if(l1 != None):l1 = l1.next
         if(l2 != None):l2 = l2.next
-    if(carry>0):
+    if(carry > 0):
         node.next = ListNode(1)
     return cur.next
 
