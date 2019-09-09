@@ -9,6 +9,8 @@ class Solution:
         nums1.extend(nums2)
         nums1.sort()
 
+        # 奇数二进制最后一位是1，偶数二进制最后一位是0
+        # 二进制右移一位=除以2的1次方
         if (m + n) & 1:
             return nums1[(m + n - 1) >> 1]
         else:
