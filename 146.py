@@ -8,7 +8,7 @@ class ListNode(object):
         self.prev = None
 
 class LRUCache:
-    def __init__(self,capacity:int):
+    def __init__(self, capacity:int):
         self.capacity = capacity
         self.hashmap = {}
         # 新建头指针和尾指针
@@ -19,7 +19,7 @@ class LRUCache:
         self.tail.prev = self.head
 
     # 定义将链表中某个节点移到末尾
-    def moveNodetoTail(self,key):
+    def moveNodetoTail(self, key):
         node = self.hashmap[key]
         # 将node置于prev和next中间
         node.prev.next = node.next
@@ -31,12 +31,35 @@ class LRUCache:
         self.tail.prev = node
 
     # 获取数据
-    def get(self,key:int):
-        # 如果已经在链表中，把它移到队尾变为最新访问的
+    def get(self, key:int) -> int:
+        # 如果在链表中，把它移到队尾变为最新访问的
         if key in self.hashmap:
             self.moveNodetoTail(key)
         # 找不到key时返回-1
         res = self.hashmap.get(key,-1)
         if res == -1:
             return res
-        
+        else:
+            return res.value
+
+    # 写入数据
+    def put(self, key:int, value:int) -> None:
+        # 如果在链表中，不需要加入新节点。但要更新节点值，并将其移到队尾。
+        if key in self.hashmap:
+            self.hashmap[key].value = value
+            self.moveNodetoTail(key)
+        else:
+            if len(self.hashmap) ==self.capacity:
+                # 去掉最久没有被访问的节点，即head节点后的第一个节点。pop方法去除dict中指定key
+                self.hashmap.pop(self.head.next.key)
+                self.head.next = self.head.next.next
+                self.head.next.prev = self.head
+            new = ListNode(key, value)
+        # 如果key不在链表中，就插入到队尾前
+        new = ListNode(key, value)
+        self.hashmap[key] = new
+        new.prev = self.tail.prev
+        new.next = self.tail
+        self.tail.prev.next = new
+        self.tail.prev = new
+
