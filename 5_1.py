@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 class Solution:
-    def longestPalindrome(self,s: str) -> str:
+    def longestPalindrome(self, s: str) -> str:
         size = len(s)
         if size <= 1:
             return s
@@ -13,9 +13,9 @@ class Solution:
         res = s[0]
 
         # 右边界从1开始
-        for r in range(1,size):
+        for r in range(1, size):
             for l in range(r):
-                if s[l] == s[r] and (r - 1 <= 2 or dp[l + 1][r - 1]):
+                if s[l] == s[r] and (r - l <= 2 or dp[l + 1][r - 1]):
                     dp[l][r] = True
                     cur_len = r - l + 1
                     if cur_len > longest_l:
