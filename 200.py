@@ -18,6 +18,9 @@ class Solution:
 
     def numIslands(self, grid: List[List[str]]) -> int:
         m = len(grid)
+        # 增加特解防止n报错
+        if m == 0:
+            return 0
         n = len(grid[0])
         marked = [[False for x in range(n)] for x in range(m)]
         count = 0
@@ -31,10 +34,10 @@ class Solution:
 
 if __name__ == '__main__':
     solution = Solution()
-    grid = [['1', '1', '1', '1', '0'],
-            ['1', '1', '0', '1', '0'],
+    grid = [['1', '1', '0', '0', '0'],
             ['1', '1', '0', '0', '0'],
-            ['0', '0', '0', '0', '0']]
+            ['0', '0', '1', '0', '0'],
+            ['0', '0', '0', '1', '1']]
     result = solution.numIslands(grid)
     print(result)
 
