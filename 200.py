@@ -13,7 +13,7 @@ class Solution:
             new_i = i + direction[0]
             new_j = j + direction[1]
             # 如果坐标不越界，没被搜索过，此时为陆地，则继续搜索算法
-            if 0 <= new_i < m and 0 <= new_j < n and not marked[new_j][new_j] and grid[new_i][new_j] == '1':
+            if 0 <= new_i < m and 0 <= new_j < n and not marked[new_i][new_j] and grid[new_i][new_j] == '1':
                 self.DFS(grid, new_i, new_j, m, n, marked)
 
     def numIslands(self, grid: List[List[str]]) -> int:
