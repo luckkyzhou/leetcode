@@ -1,3 +1,4 @@
+from collections import deque
 if __name__ == '__main__':
     '''
     num_list = [[0] * 2 for i in range(2)]
@@ -17,6 +18,12 @@ if __name__ == '__main__':
             ['0', '0', '0', '0', '0']]
     m = len(grid)
     n = len(grid[0])
-    print(grid, m, n)
-    print(grid[2][3])
+    queue = deque()
+    #queue.append((1,1,1))
+    if queue:
+        x, y, z = queue.popleft()
+        print(x,y)
+        print(queue)
+    else:
+        print(m)
 
