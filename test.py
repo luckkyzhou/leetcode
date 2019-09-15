@@ -11,7 +11,7 @@ if __name__ == '__main__':
     r = 3
     res = s[l:r + 1]
     print(res)
-    '''
+    
     grid = [['1', '1', '1', '1', '0'],
             ['1', '1', '0', '1', '0'],
             ['1', '1', '0', '0', '0'],
@@ -26,4 +26,11 @@ if __name__ == '__main__':
         print(queue)
     else:
         print(m)
+    '''
 
+    n = [1, 2, 3, 4, 5]
+    #print(n[-1])
+
+    m = [0 for x in range(4)]
+    for i in range(1, 4):
+        print(m[i])
