@@ -7,7 +7,7 @@ class Solution:
         result = []
 
         for i in range(len(nums)):
-
+            # 此if增加了边界条件防止产生重复解
             if i == 0 or nums[i] > nums[i - 1]:
                 l = i + 1
                 r = len(nums) - 1
