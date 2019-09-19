@@ -21,6 +21,14 @@ class Solution:
             l2.next = self.mergeTwoKLists(l1, l2.next)
             return l2
 
+    def merge(self, lists, left, right):
+        if left == right:
+            return lists[left]
+
+        mid = (right + left) // 2
+        l1 = self.merge()
+
+
     def mergeKLists(self, lists: List[ListNode]) -> ListNode:
         if lists.length == 0:
             return []
