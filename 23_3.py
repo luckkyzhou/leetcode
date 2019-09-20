@@ -16,7 +16,7 @@ class Solution:
 
         for i in range(len(lists)):
             if lists[i]:
-                heapq.heappush(head, (lists[i], i))
+                heapq.heappush(head, (lists[i].val, i))
                 lists[i] = lists[i].next
 
         while head:
@@ -25,6 +25,6 @@ class Solution:
             cur = cur.next
 
             if lists[idx]:
-                heapq.heappush(head, (lists[idx], idx))
+                heapq.heappush(head, (lists[idx].val, idx))
                 lists[idx] = lists[idx].next
         return res.next
