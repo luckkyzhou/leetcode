@@ -35,6 +35,7 @@ if __name__ == '__main__':
     for i in range(1, 4):
         print(m[i])
     '''
-
-    lookup = set('a')
-    print(lookup)
+    res = 'Twenty '
+    while res[-1] == ' ':
+        res = res[:-1]
+    print(res)
