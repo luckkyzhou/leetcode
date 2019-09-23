@@ -4,10 +4,10 @@ from typing import List
 
 class Solution:
     def hammingWeight(self, n):
-        ans = 0
+        res = 0
 
         while n:
             m = n & 1
-            ans += m
+            res += m
             n = n >> 1
-        return ans
+        return res
