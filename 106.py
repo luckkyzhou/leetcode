@@ -10,6 +10,7 @@ class TreeNode:
 
 class Solution:
     def buildTree(self, inorder: List[int], postorder: List[int]) -> TreeNode:
+        # 使左子树或者右子树有空值
         if len(inorder) == 0 or len(postorder) == 0:
             return None
         root = TreeNode(postorder[-1])
