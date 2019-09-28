@@ -2,7 +2,7 @@
 from typing import List
 
 class Solution:
-    def groupAnagrams(self, strs: List[str]):# -> List[List[str]]:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         strDict = {}
         res = []
         for _str in strs:
