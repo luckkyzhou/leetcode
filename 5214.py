@@ -2,6 +2,7 @@
 from typing import List
 from collections import Counter
 
+# 错误解法
 class Solution:
     def longestSubsequence(self, arr: List[int], difference: int) -> int:
         count = 0
