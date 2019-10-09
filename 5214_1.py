@@ -3,10 +3,10 @@ from typing import List
 
 class Solution:
     def longestSubsequence(self, arr: List[int], difference: int) -> int:
-        d = {}
-        for a in arr:
-            d[a] = d.get(a - difference, 0) + 1
-        return max(d.values())
+        hashmap = {}
+        for ar in arr:
+            hashmap[ar] = hashmap.get(ar - difference, 0) + 1
+        return max(hashmap.values())
 
 if __name__ == '__main__':
     solution = Solution()
