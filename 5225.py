@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
     def maxEqualFreq(self, nums: List[int]) -> int:
-        for i in range(len(nums) - 1, -1, -1):  
+        for i in range(len(nums) - 1, -1, -1):
             #nums_x = [x for x in nums if x != nums[i]]
             #if len(nums_x) == 0:
             #    return i
