@@ -28,7 +28,7 @@ class Solution:
         # 1 在前，0 在后
         inversed = [set() for _ in range(numCourses)]
         for x, y in prerequisites:
-            inversed[y].add(x)
+            inversed[x].add(y)
 
         for i in range(numCourses):
             if self.DFS(i, inversed, visited): return False
