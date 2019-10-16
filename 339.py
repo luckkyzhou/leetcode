@@ -48,6 +48,6 @@ class Solution:
     def sumDFS(self, num: NestedInteger, level):
         if num.isInteger(): return num.getInteger() * level
         res = 0
-        for num in num.getList():
-            res += self.sumDFS(num, level + 1)
+        for a in num.getList():
+            res += self.sumDFS(a, level + 1)
         return res
