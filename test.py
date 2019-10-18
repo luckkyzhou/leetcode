@@ -64,6 +64,10 @@ if __name__ == '__main__':
     value = 3
     d1.setdefault(key, []).append(value)
     print(d1)
-    '''
+
     duplicates = [2 * ch for ch in ascii_lowercase]
     print(duplicates)
+    '''
+
+    test = [set() for _ in range(5)]
+    print(test)
