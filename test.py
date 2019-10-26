@@ -68,8 +68,5 @@ if __name__ == '__main__':
     duplicates = [2 * ch for ch in ascii_lowercase]
     print(duplicates)
     '''
-    res = 0
-    for i in range(5):
-        res += 1
-    print(res)
+
 
