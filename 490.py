@@ -15,8 +15,7 @@ class Solution:
             for direction in directions:
                 new_i = i
                 new_j = j
-                while 0 <= new_i + direction[0] < m and 0 <= new_j + direction[1] < n and maze[new_i + direction[0]][
-                    new_j + direction[1]] == 0:
+                while 0 <= new_i + direction[0] < m and 0 <= new_j + direction[1] < n and maze[new_i + direction[0]][new_j + direction[1]] == 0:
                     new_i += direction[0]
                     new_j += direction[1]
                 if new_i == i and new_j == j: continue
