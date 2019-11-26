@@ -9,5 +9,5 @@ class Solution:
                 diff = A[i] - A[j]
                 n = dp[j].get(diff, 1) + 1
                 dp[i][diff] = n
-            res = max(res, max(arr[i].values()))
+            res = max(res, max(dp[i].values()))
         return res
