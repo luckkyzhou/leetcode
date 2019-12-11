@@ -4,8 +4,5 @@ from string import ascii_lowercase
 import collections
 from typing import List
 import heapq
+import math
 
-
-A = [1,2,3,4]
-arr= [{} for i in range(len(A))]
-print(arr)
