@@ -30,7 +30,7 @@ class Solution:
                 new_j = j + direction[1]
                 if 0 <= new_i < len(board) and 0 <= new_j < len(board[0]) and board[new_i][new_j] != "#":
                     DFS(new_i, new_j, node, curStr + char)
-            # 四个方向搜索完，复原
+            # 单个位置开头的单词已经搜索完，复原
             board[i][j] = char
 
         for i in range(len(board)):
