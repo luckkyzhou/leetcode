@@ -16,5 +16,5 @@ class Solution:
             self.res = max(self.res, length)
             DFS(root.left, root, length)
             DFS(root.right, root, length)
-        DFS(root, None, 0)
+        DFS(root, TreeNode(-99999), 0)
         return self.res
