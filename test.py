@@ -8,8 +8,11 @@ import heapq
 import math
 import random
 import itertools
+import re
 
 if __name__ == '__main__':
-    hashmap = defaultdict(int)
-    hashmap[(1,2)] = 1
-    print(hashmap)
+    a = "ccc"
+    for match in re.finditer("cc", a):
+        start = match.start()
+        end = match.end()
+        print("Found {} at {}:{}".format(a[start:end], start, end))
