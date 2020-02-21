@@ -11,8 +11,5 @@ import itertools
 import re
 
 if __name__ == '__main__':
-    a = "ccc"
-    for match in re.finditer("cc", a):
-        start = match.start()
-        end = match.end()
-        print("Found {} at {}:{}".format(a[start:end], start, end))
+    M = 2
+    print(M)
