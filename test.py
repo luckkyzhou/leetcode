@@ -11,5 +11,6 @@ import itertools
 import re
 
 if __name__ == '__main__':
-    M = 2
-    print(M)
+    test = [1,2,3]
+    test += [4]
+    print(test)
