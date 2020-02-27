@@ -1,4 +1,3 @@
-import
 class Codec:
 
     def encode (self, strs):
