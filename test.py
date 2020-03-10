@@ -11,6 +11,5 @@ import itertools
 import re
 
 if __name__ == '__main__':
-    test = [1,2,3]
-    test += [4]
-    print(test)
+    test = "A"
+    print(65 | 65)
