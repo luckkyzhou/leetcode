@@ -4,7 +4,7 @@ class Solution(object):
         :type num: int
         :rtype: bool
         """
-        if num == 1:
+        if num == 1: 
             return True
         
         left = 1
